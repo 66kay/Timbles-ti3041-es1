@@ -1,7 +1,8 @@
-{% extends 'catalogo/base.html' %} <!-- Hereda el diseño de base.html -->
+{% extends 'catalogo/base.html' %} 
 
 {% block content %}
 <h2>Catálogo de Productos</h2>
+<p>Revisa nuestro catálogo completo. Los productos sin stock están marcados en rojo.</p>
 <table>
     <thead>
         <tr>
@@ -14,16 +15,19 @@
         </tr>
     </thead>
     <tbody>
-        <!-- Bucle FOR: Recorre cada 'producto' que enviamos desde views.py -->
         {% for producto in productos %}
+        <!-- NUEVO ETAPA 3: Usamos un IF para saber si el stock es 0. Si es 0, aplicamos la clase CSS "agotado" (fondo rojo) -->
+        {% if producto.stock == 0 %}
+        <tr class="agotado">
+        {% else %}
         <tr>
+        {% endif %}
             <td>{{ producto.id }}</td>
             <td>{{ producto.nombre }}</td>
             <td>{{ producto.categoria }}</td>
             <td>${{ producto.precio }}</td>
             <td>{{ producto.stock }}</td>
-            <!-- Enlace dinámico que usa el ID del producto para llevar a la vista de detalle -->
-            <td><a href="/producto/{{ producto.id }}/">Ver Detalle</a></td>
+            <td><a href="/producto/{{ producto.id }}/" style="color: inherit;">Ver Detalle</a></td>
         </tr>
         {% endfor %}
     </tbody>

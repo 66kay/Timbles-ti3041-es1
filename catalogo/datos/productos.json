@@ -1,0 +1,282 @@
+[
+    {
+        "id": 1,
+        "nombre": "Martillo de oreja",
+        "categoria": "Herramientas manuales",
+        "precio": 1500,
+        "stock": 0
+    },
+    {
+        "id": 2,
+        "nombre": "Destornillador Phillips",
+        "categoria": "Herramientas eléctricas",
+        "precio": 1850,
+        "stock": 7
+    },
+    {
+        "id": 3,
+        "nombre": "Llave inglesa",
+        "categoria": "Materiales de construcción",
+        "precio": 2200,
+        "stock": 14
+    },
+    {
+        "id": 4,
+        "nombre": "Alicate universal",
+        "categoria": "Fijaciones",
+        "precio": 2550,
+        "stock": 21
+    },
+    {
+        "id": 5,
+        "nombre": "Serrucho",
+        "categoria": "Pinturas",
+        "precio": 2900,
+        "stock": 28
+    },
+    {
+        "id": 6,
+        "nombre": "Taladro percutor",
+        "categoria": "Herramientas manuales",
+        "precio": 3250,
+        "stock": 35
+    },
+    {
+        "id": 7,
+        "nombre": "Amoladora angular",
+        "categoria": "Herramientas eléctricas",
+        "precio": 3600,
+        "stock": 42
+    },
+    {
+        "id": 8,
+        "nombre": "Sierra circular",
+        "categoria": "Materiales de construcción",
+        "precio": 3950,
+        "stock": 49
+    },
+    {
+        "id": 9,
+        "nombre": "Lijadora orbital",
+        "categoria": "Fijaciones",
+        "precio": 4300,
+        "stock": 6
+    },
+    {
+        "id": 10,
+        "nombre": "Atornillador inalámbrico",
+        "categoria": "Pinturas",
+        "precio": 4650,
+        "stock": 13
+    },
+    {
+        "id": 11,
+        "nombre": "Cemento 25kg",
+        "categoria": "Herramientas manuales",
+        "precio": 5000,
+        "stock": 20
+    },
+    {
+        "id": 12,
+        "nombre": "Ladrillo hueco",
+        "categoria": "Herramientas eléctricas",
+        "precio": 5350,
+        "stock": 27
+    },
+    {
+        "id": 13,
+        "nombre": "Arena fina",
+        "categoria": "Materiales de construcción",
+        "precio": 5700,
+        "stock": 34
+    },
+    {
+        "id": 14,
+        "nombre": "Varilla de hierro",
+        "categoria": "Fijaciones",
+        "precio": 6050,
+        "stock": 41
+    },
+    {
+        "id": 15,
+        "nombre": "Yeso 10kg",
+        "categoria": "Pinturas",
+        "precio": 6400,
+        "stock": 48
+    },
+    {
+        "id": 16,
+        "nombre": "Clavos 2 pulgadas",
+        "categoria": "Herramientas manuales",
+        "precio": 6750,
+        "stock": 5
+    },
+    {
+        "id": 17,
+        "nombre": "Tornillos para madera",
+        "categoria": "Herramientas eléctricas",
+        "precio": 7100,
+        "stock": 12
+    },
+    {
+        "id": 18,
+        "nombre": "Tarugos universales",
+        "categoria": "Materiales de construcción",
+        "precio": 7450,
+        "stock": 19
+    },
+    {
+        "id": 19,
+        "nombre": "Tuercas hexagonales",
+        "categoria": "Fijaciones",
+        "precio": 7800,
+        "stock": 26
+    },
+    {
+        "id": 20,
+        "nombre": "Arandelas",
+        "categoria": "Pinturas",
+        "precio": 8150,
+        "stock": 33
+    },
+    {
+        "id": 21,
+        "nombre": "Pintura látex interior",
+        "categoria": "Herramientas manuales",
+        "precio": 8500,
+        "stock": 40
+    },
+    {
+        "id": 22,
+        "nombre": "Esmalte sintético",
+        "categoria": "Herramientas eléctricas",
+        "precio": 8850,
+        "stock": 47
+    },
+    {
+        "id": 23,
+        "nombre": "Pincel 2 pulgadas",
+        "categoria": "Materiales de construcción",
+        "precio": 9200,
+        "stock": 4
+    },
+    {
+        "id": 24,
+        "nombre": "Rodillo antigota",
+        "categoria": "Fijaciones",
+        "precio": 9550,
+        "stock": 11
+    },
+    {
+        "id": 25,
+        "nombre": "Aguarrás",
+        "categoria": "Pinturas",
+        "precio": 9900,
+        "stock": 18
+    },
+    {
+        "id": 26,
+        "nombre": "Cinta métrica 5m",
+        "categoria": "Herramientas manuales",
+        "precio": 10250,
+        "stock": 25
+    },
+    {
+        "id": 27,
+        "nombre": "Nivel de burbuja",
+        "categoria": "Herramientas eléctricas",
+        "precio": 10600,
+        "stock": 32
+    },
+    {
+        "id": 28,
+        "nombre": "Escuadra metálica",
+        "categoria": "Materiales de construcción",
+        "precio": 10950,
+        "stock": 39
+    },
+    {
+        "id": 29,
+        "nombre": "Cúter profesional",
+        "categoria": "Fijaciones",
+        "precio": 11300,
+        "stock": 46
+    },
+    {
+        "id": 30,
+        "nombre": "Espátula",
+        "categoria": "Pinturas",
+        "precio": 11650,
+        "stock": 3
+    },
+    {
+        "id": 31,
+        "nombre": "Guantes de trabajo",
+        "categoria": "Herramientas manuales",
+        "precio": 12000,
+        "stock": 10
+    },
+    {
+        "id": 32,
+        "nombre": "Gafas de seguridad",
+        "categoria": "Herramientas eléctricas",
+        "precio": 12350,
+        "stock": 17
+    },
+    {
+        "id": 33,
+        "nombre": "Casco protector",
+        "categoria": "Materiales de construcción",
+        "precio": 12700,
+        "stock": 24
+    },
+    {
+        "id": 34,
+        "nombre": "Mascarilla",
+        "categoria": "Fijaciones",
+        "precio": 13050,
+        "stock": 31
+    },
+    {
+        "id": 35,
+        "nombre": "Zapatos de seguridad",
+        "categoria": "Pinturas",
+        "precio": 13400,
+        "stock": 38
+    },
+    {
+        "id": 36,
+        "nombre": "Pegamento extrafuerte",
+        "categoria": "Herramientas manuales",
+        "precio": 13750,
+        "stock": 45
+    },
+    {
+        "id": 37,
+        "nombre": "Cinta adhesiva",
+        "categoria": "Herramientas eléctricas",
+        "precio": 14100,
+        "stock": 2
+    },
+    {
+        "id": 38,
+        "nombre": "Silicona transparente",
+        "categoria": "Materiales de construcción",
+        "precio": 14450,
+        "stock": 9
+    },
+    {
+        "id": 39,
+        "nombre": "Espuma de poliuretano",
+        "categoria": "Fijaciones",
+        "precio": 14800,
+        "stock": 16
+    },
+    {
+        "id": 40,
+        "nombre": "Cinta aislante",
+        "categoria": "Pinturas",
+        "precio": 15150,
+        "stock": 23
+    }
+]

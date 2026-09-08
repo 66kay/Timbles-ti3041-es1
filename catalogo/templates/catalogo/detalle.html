@@ -1,0 +1,15 @@
+{% extends 'catalogo/base.html' %} <!-- Hereda el diseño de base.html -->
+
+{% block content %}
+<h2>Detalle del Producto</h2>
+<div style="border: 1px solid #ccc; padding: 1rem; margin-top: 1rem;">
+    <!-- Mostramos los atributos específicos del producto que nos envió views.py -->
+    <h3>{{ producto.nombre }}</h3>
+    <p><strong>ID:</strong> {{ producto.id }}</p>
+    <p><strong>Categoría:</strong> {{ producto.categoria }}</p>
+    <p><strong>Precio:</strong> ${{ producto.precio }}</p>
+    <p><strong>Stock:</strong> {{ producto.stock }} unidades</p>
+    <br>
+    <a href="/" style="padding: 0.5rem 1rem; background-color: #333; color: white; text-decoration: none;">Volver al Catálogo</a>
+</div>
+{% endblock %}

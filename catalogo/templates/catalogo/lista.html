@@ -1,0 +1,31 @@
+{% extends 'catalogo/base.html' %} <!-- Hereda el diseño de base.html -->
+
+{% block content %}
+<h2>Catálogo de Productos</h2>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Categoría</th>
+            <th>Precio</th>
+            <th>Stock</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Bucle FOR: Recorre cada 'producto' que enviamos desde views.py -->
+        {% for producto in productos %}
+        <tr>
+            <td>{{ producto.id }}</td>
+            <td>{{ producto.nombre }}</td>
+            <td>{{ producto.categoria }}</td>
+            <td>${{ producto.precio }}</td>
+            <td>{{ producto.stock }}</td>
+            <!-- Enlace dinámico que usa el ID del producto para llevar a la vista de detalle -->
+            <td><a href="/producto/{{ producto.id }}/">Ver Detalle</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

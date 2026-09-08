@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ferretería Timbles</title>
-    <!-- Estilos CSS simples -->
     <style>
         body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
         header { background-color: #333; color: white; padding: 1rem; text-align: center; display: flex; justify-content: space-around; align-items: center;}
@@ -14,16 +13,18 @@
         table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
         th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
         th { background-color: #f2f2f2; }
-        .agotado { background-color: #ffcccc; color: #a00; font-weight: bold; } /* Clase CSS para productos agotados */
+        .agotado { background-color: #ffcccc; color: #a00; font-weight: bold; }
+        .logout-btn { background-color: #d9534f; color: white; padding: 5px 10px; text-decoration: none; border-radius: 4px; font-weight: bold;}
     </style>
 </head>
 <body>
     <header>
         <h1>Ferretería Timbles</h1>
-        <!-- NUEVO ETAPA 3: Mostramos la variable total_stock que viene desde views.py -->
         <div style="background-color: #555; padding: 10px; border-radius: 5px;">
             <strong>Total en Bodega:</strong> {{ total_stock }} unidades
         </div>
+        <!-- Botón para cerrar sesión -->
+        <a href="{% url 'logout_view' %}" class="logout-btn">Salir</a>
     </header>
     <nav>
         <a href="/">Inicio (Catálogo)</a>

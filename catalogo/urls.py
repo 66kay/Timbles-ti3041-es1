@@ -2,8 +2,11 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    # Ruta vacía: Al entrar al inicio, llama a views.index
+    # Rutas de autenticación
+    path('login/', views.login_view, name='login_view'),
+    path('logout/', views.logout_view, name='logout_view'),
+    
+    # Rutas del catálogo
     path('', views.index, name='index'),
-    # Ruta con parámetro <int:id>: Pasa un número (ID) a views.detalle
     path('producto/<int:id>/', views.detalle, name='detalle'),
 ]

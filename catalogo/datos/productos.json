@@ -1,282 +1,402 @@
 [
     {
         "id": 1,
-        "nombre": "Martillo de oreja",
-        "categoria": "Herramientas manuales",
-        "precio": 1500,
-        "stock": 0
+        "nombre": "Martillo Carpintero 20 oz Mango Madera Stanley",
+        "marca": "Stanley",
+        "categoria": "Herramientas Manuales",
+        "precio": 9990,
+        "stock": 15,
+        "descripcion": "Martillo carpintero de 20 oz forjado en acero de alta resistencia con mango de madera ergonómico. Ideal para clavar y desclavar con precisión en trabajos de carpintería y construcción.",
+        "imagen": "/static/catalogo/images/productos/1.jpg"
     },
     {
         "id": 2,
-        "nombre": "Destornillador Phillips",
-        "categoria": "Herramientas eléctricas",
-        "precio": 1850,
-        "stock": 7
+        "nombre": "Destornillador Phillips #2x4 Acero Ubermann",
+        "marca": "Ubermann",
+        "categoria": "Herramientas Manuales",
+        "precio": 5990,
+        "stock": 30,
+        "descripcion": "Destornillador de cruz Phillips #2 con varilla de acero cromo vanadio y punta imantada. Mango bimaterial antideslizante para máximo torque y comodidad.",
+        "imagen": "/static/catalogo/images/productos/2.jpg"
     },
     {
         "id": 3,
-        "nombre": "Llave inglesa",
-        "categoria": "Materiales de construcción",
-        "precio": 2200,
-        "stock": 14
+        "nombre": "Llave Francesa Ajustable 10 Pulgadas Karson",
+        "marca": "Karson",
+        "categoria": "Herramientas Manuales",
+        "precio": 5490,
+        "stock": 12,
+        "descripcion": "Llave ajustable de 10 pulgadas (250 mm) cromada, con escala milimétrica grabada en láser y moleta de apertura suave para labores de gasfitería y mecánica.",
+        "imagen": "/static/catalogo/images/productos/3.jpg"
     },
     {
         "id": 4,
-        "nombre": "Alicate universal",
-        "categoria": "Fijaciones",
-        "precio": 2550,
-        "stock": 21
+        "nombre": "Alicate Universal Aislado 8 Pulgadas Ubermann",
+        "marca": "Ubermann",
+        "categoria": "Herramientas Manuales",
+        "precio": 9990,
+        "stock": 22,
+        "descripcion": "Alicate universal de 8 pulgadas con mordazas de corte endurecidas por inducción y aislamiento eléctrico para trabajos profesionales seguros.",
+        "imagen": "/static/catalogo/images/productos/4.jpg"
     },
     {
         "id": 5,
-        "nombre": "Serrucho",
-        "categoria": "Pinturas",
-        "precio": 2900,
-        "stock": 28
+        "nombre": "Serrucho Carpintero 22 Pulgadas Mango Fibra Ingco",
+        "marca": "Ingco",
+        "categoria": "Herramientas Manuales",
+        "precio": 6990,
+        "stock": 18,
+        "descripcion": "Serrucho tradicional de carpintería de 22 pulgadas con hoja de acero endurecido y dentado cruzado para cortes rápidos y precisos en maderas blandas y duras.",
+        "imagen": "/static/catalogo/images/productos/5.jpg"
     },
     {
         "id": 6,
-        "nombre": "Taladro percutor",
-        "categoria": "Herramientas manuales",
-        "precio": 3250,
-        "stock": 35
+        "nombre": "Huincha de Medir 5 Metros Jadever",
+        "marca": "Jadever",
+        "categoria": "Herramientas Manuales",
+        "precio": 3990,
+        "stock": 25,
+        "descripcion": "Cinta métrica retráctil de 5 metros con carcasa engomada resistente a impactos, botón de freno automático y gancho magnético para mediciones individuales.",
+        "imagen": "/static/catalogo/images/productos/6.jpg"
     },
     {
         "id": 7,
-        "nombre": "Amoladora angular",
-        "categoria": "Herramientas eléctricas",
-        "precio": 3600,
-        "stock": 42
+        "nombre": "Nivel de Mano Torpedo Magnético Stanley",
+        "marca": "Stanley",
+        "categoria": "Herramientas Manuales",
+        "precio": 6490,
+        "stock": 14,
+        "descripcion": "Nivel tipo torpedo de 9 pulgadas con cuerpo de aluminio y 3 viales de alta visibilidad para nivelación en 45°, 90° y 180°. Base imantada para trabajar en estructuras metálicas.",
+        "imagen": "/static/catalogo/images/productos/7.jpg"
     },
     {
         "id": 8,
-        "nombre": "Sierra circular",
-        "categoria": "Materiales de construcción",
-        "precio": 3950,
-        "stock": 49
+        "nombre": "Escuadra de Carpintero Metálica 12 Pulgadas",
+        "marca": "Bauker",
+        "categoria": "Herramientas Manuales",
+        "precio": 5990,
+        "stock": 20,
+        "descripcion": "Escuadra angular de 30 cm (12 pulgadas) en acero inoxidable con graduación clara en centímetros y pulgadas, ideal para trazados y verificación de ángulos rectos.",
+        "imagen": "/static/catalogo/images/productos/8.jpg"
     },
     {
         "id": 9,
-        "nombre": "Lijadora orbital",
-        "categoria": "Fijaciones",
-        "precio": 4300,
-        "stock": 6
+        "nombre": "Taladro Percutor 13mm 650W Lernen Pro",
+        "marca": "Lernen",
+        "categoria": "Herramientas Eléctricas",
+        "precio": 39990,
+        "stock": 8,
+        "descripcion": "Taladro percutor eléctrico con mandril de 13 mm (1/2 pulgada), control de velocidad variable reversible y selector de modo giro/percusión para mampostería y madera.",
+        "imagen": "/static/catalogo/images/productos/9.jpg"
     },
     {
         "id": 10,
-        "nombre": "Atornillador inalámbrico",
-        "categoria": "Pinturas",
-        "precio": 4650,
-        "stock": 13
+        "nombre": "Atornillador Inalámbrico 3.6V Litio Bauker",
+        "marca": "Bauker",
+        "categoria": "Herramientas Eléctricas",
+        "precio": 9990,
+        "stock": 10,
+        "descripcion": "Atornillador compacto recargable con batería de ion litio de 3.6V, luz LED integrada y cabezal articulado para acceder a espacios reducidos en ensamblaje de muebles.",
+        "imagen": "/static/catalogo/images/productos/10.jpg"
     },
     {
         "id": 11,
-        "nombre": "Cemento 25kg",
-        "categoria": "Herramientas manuales",
-        "precio": 5000,
-        "stock": 20
+        "nombre": "Esmeril Angular 4 1/2 Pulgadas 20V Ingco",
+        "marca": "Ingco",
+        "categoria": "Herramientas Eléctricas",
+        "precio": 79990,
+        "stock": 6,
+        "descripcion": "Amoladora angular para discos de 115 mm (4-1/2 pulgada) con potente motor Brushless de 20V, bloqueo de husillo y guarda de seguridad ajustable para corte y desbaste de metales.",
+        "imagen": "/static/catalogo/images/productos/11.jpg"
     },
     {
         "id": 12,
-        "nombre": "Ladrillo hueco",
-        "categoria": "Herramientas eléctricas",
-        "precio": 5350,
-        "stock": 27
+        "nombre": "Sierra Circular Eléctrica 7 1/4 Pulgadas 1600W Makita",
+        "marca": "Makita",
+        "categoria": "Herramientas Eléctricas",
+        "precio": 119990,
+        "stock": 5,
+        "descripcion": "Sierra circular para carpintería con disco de 7-1/4 pulgadas y motor de 1600W. Base de aluminio graduada para cortes biselados precisos de hasta 45 grados.",
+        "imagen": "/static/catalogo/images/productos/12.jpg"
     },
     {
         "id": 13,
-        "nombre": "Arena fina",
-        "categoria": "Materiales de construcción",
-        "precio": 5700,
-        "stock": 34
+        "nombre": "Lijadora Roto Orbital 125mm Makita",
+        "marca": "Makita",
+        "categoria": "Herramientas Eléctricas",
+        "precio": 69990,
+        "stock": 7,
+        "descripcion": "Lijadora de acabado con plato de 125 mm de fijación por velcro, empuñadura ergonómica con amortiguación de vibraciones y recolector de polvo integrado.",
+        "imagen": "/static/catalogo/images/productos/13.jpg"
     },
     {
         "id": 14,
-        "nombre": "Varilla de hierro",
-        "categoria": "Fijaciones",
-        "precio": 6050,
-        "stock": 41
+        "nombre": "Sierra Caladora Pendular 550W Bauker",
+        "marca": "Bauker",
+        "categoria": "Herramientas Eléctricas",
+        "precio": 29990,
+        "stock": 9,
+        "descripcion": "Sierra caladora pendular de 550W con velocidad variable, zapata basculante para cortes en ángulo y guía láser para trazos exactos en madera y planchas de acero.",
+        "imagen": "/static/catalogo/images/productos/14.jpg"
     },
     {
         "id": 15,
-        "nombre": "Yeso 10kg",
-        "categoria": "Pinturas",
-        "precio": 6400,
-        "stock": 48
+        "nombre": "Pistola de Calor 2000W Total Tools",
+        "marca": "Total Tools",
+        "categoria": "Herramientas Eléctricas",
+        "precio": 25990,
+        "stock": 4,
+        "descripcion": "Decapador térmico industrial de 2000W con selector de dos temperaturas (350°C y 550°C), incluye boquillas reductoras para retiro de pintura y termocontracción.",
+        "imagen": "/static/catalogo/images/productos/15.jpg"
     },
     {
         "id": 16,
-        "nombre": "Clavos 2 pulgadas",
-        "categoria": "Herramientas manuales",
-        "precio": 6750,
-        "stock": 5
+        "nombre": "Rotomartillo SDS Plus 1500W Ingco Industrial",
+        "marca": "Ingco",
+        "categoria": "Herramientas Eléctricas",
+        "precio": 129990,
+        "stock": 3,
+        "descripcion": "Rotomartillo electroneumático de alta potencia con encastre SDS Plus, 5.5 Joules de impacto y sistema anti-vibración para demolición y perforación en hormigón armado.",
+        "imagen": "/static/catalogo/images/productos/16.jpg"
     },
     {
         "id": 17,
-        "nombre": "Tornillos para madera",
-        "categoria": "Herramientas eléctricas",
-        "precio": 7100,
-        "stock": 12
+        "nombre": "Cemento Especial 25 kg Cbb Bío Bío",
+        "marca": "Bío Bío",
+        "categoria": "Materiales de Construcción",
+        "precio": 5090,
+        "stock": 50,
+        "descripcion": "Cemento hidráulico de uso general grado corriente en saco de 25 kg. Especialmente formulado para hormigones de fundación, pilares, losas, cadenas y morteros de pega.",
+        "imagen": "/static/catalogo/images/productos/17.jpg"
     },
     {
         "id": 18,
-        "nombre": "Tarugos universales",
-        "categoria": "Materiales de construcción",
-        "precio": 7450,
-        "stock": 19
+        "nombre": "Arena Fina para Construcción Saco 25 kg",
+        "marca": "Sodimac",
+        "categoria": "Materiales de Construcción",
+        "precio": 1990,
+        "stock": 40,
+        "descripcion": "Árido seleccionado y lavado, libre de sales e impurezas orgánicas. Ideal para mezclas de estuco, afinado de pisos y preparación de morteros de enlucido.",
+        "imagen": "/static/catalogo/images/productos/18.jpg"
     },
     {
         "id": 19,
-        "nombre": "Tuercas hexagonales",
-        "categoria": "Fijaciones",
-        "precio": 7800,
-        "stock": 26
+        "nombre": "Yeso Construcción Express Saco 25 kg Volcán",
+        "marca": "Volcán",
+        "categoria": "Materiales de Construcción",
+        "precio": 5190,
+        "stock": 35,
+        "descripcion": "Yeso hemihidratado de fraguado controlado para enlucidos interiores sobre hormigón y ladrillo. Proporciona terminaciones suaves, ignífugas y listas para pintar.",
+        "imagen": "/static/catalogo/images/productos/19.jpg"
     },
     {
         "id": 20,
-        "nombre": "Arandelas",
-        "categoria": "Pinturas",
-        "precio": 8150,
-        "stock": 33
+        "nombre": "Ladrillo Fiscal Cerámico Estructural 14x29x7 cm",
+        "marca": "Cerámica Santiago",
+        "categoria": "Materiales de Construcción",
+        "precio": 450,
+        "stock": 200,
+        "descripcion": "Ladrillo de arcilla cocida tradicional para albañilería armada y confinada. Brinda alta resistencia a la compresión y excelentes propiedades de aislamiento térmico y acústico.",
+        "imagen": "/static/catalogo/images/productos/20.jpg"
     },
     {
         "id": 21,
-        "nombre": "Pintura látex interior",
-        "categoria": "Herramientas manuales",
-        "precio": 8500,
-        "stock": 40
+        "nombre": "Barra de Fierro Construcción 8mm x 6m A-63",
+        "marca": "Aza",
+        "categoria": "Materiales de Construcción",
+        "precio": 4990,
+        "stock": 30,
+        "descripcion": "Barra de acero estriado de 8 mm de diámetro por 6 metros de largo, calidad A630-420H. Esencial para enfierraduras de pilares, cadenas y vigas de hormigón armado.",
+        "imagen": "/static/catalogo/images/productos/21.jpg"
     },
     {
         "id": 22,
-        "nombre": "Esmalte sintético",
-        "categoria": "Herramientas eléctricas",
-        "precio": 8850,
-        "stock": 47
+        "nombre": "Malla Electrosoldada C-92 2.2x5m Acmanet",
+        "marca": "Acmanet",
+        "categoria": "Materiales de Construcción",
+        "precio": 14350,
+        "stock": 10,
+        "descripcion": "Malla de alambre de acero de alta resistencia trefilado en frío y electrosoldado en cuadrícula de 15x15 cm. Utilizada para control de fisuración en radieres y losas.",
+        "imagen": "/static/catalogo/images/productos/22.jpg"
     },
     {
         "id": 23,
-        "nombre": "Pincel 2 pulgadas",
-        "categoria": "Materiales de construcción",
-        "precio": 9200,
-        "stock": 4
+        "nombre": "Adhesivo Cerámico Bekron Polvo 25 kg",
+        "marca": "Bekron",
+        "categoria": "Materiales de Construcción",
+        "precio": 6990,
+        "stock": 28,
+        "descripcion": "Mortero adhesivo base cemento y aditivos para la instalación de cerámicas, baldosas y azulejos sobre muros y pisos de hormigón o estuco en interiores.",
+        "imagen": "/static/catalogo/images/productos/23.jpg"
     },
     {
         "id": 24,
-        "nombre": "Rodillo antigota",
-        "categoria": "Fijaciones",
-        "precio": 9550,
-        "stock": 11
+        "nombre": "Fragüe Blanco Cerámico Saco 1 kg Topex",
+        "marca": "Topex",
+        "categoria": "Materiales de Construcción",
+        "precio": 2490,
+        "stock": 45,
+        "descripcion": "Mortero de rejuntado impermeable color blanco puro para juntas de 2 a 5 mm entre azulejos y cerámicas. Contiene aditivos antihongos e hidrorrepelentes.",
+        "imagen": "/static/catalogo/images/productos/24.jpg"
     },
     {
         "id": 25,
-        "nombre": "Aguarrás",
-        "categoria": "Pinturas",
-        "precio": 9900,
-        "stock": 18
+        "nombre": "Clavo Corriente 2 1/2 Pulgadas Bolsa 1 kg Inchalam",
+        "marca": "Inchalam",
+        "categoria": "Fijaciones",
+        "precio": 2490,
+        "stock": 60,
+        "descripcion": "Clavos de acero trefilado con cabeza plana y punta diamante de 2.5 pulgadas, diseñados para uniones estructurales en carpintería y encofrados de madera.",
+        "imagen": "/static/catalogo/images/productos/25.jpg"
     },
     {
         "id": 26,
-        "nombre": "Cinta métrica 5m",
-        "categoria": "Herramientas manuales",
-        "precio": 10250,
-        "stock": 25
+        "nombre": "Tornillo Madera Aglomerada 6x1 Caja 100 un Mamut",
+        "marca": "Mamut",
+        "categoria": "Fijaciones",
+        "precio": 3490,
+        "stock": 40,
+        "descripcion": "Tornillos autoperforantes cincados con cabeza trompeta y ranura cruzada PH2, óptimos para fijación firme en maderas naturales, terciados y placas de melamina.",
+        "imagen": "/static/catalogo/images/productos/26.jpg"
     },
     {
         "id": 27,
-        "nombre": "Nivel de burbuja",
-        "categoria": "Herramientas eléctricas",
-        "precio": 10600,
-        "stock": 32
+        "nombre": "Tarugo Nylon con Tope 8mm Bolsa 50 un Fixser",
+        "marca": "Fixser",
+        "categoria": "Fijaciones",
+        "precio": 1990,
+        "stock": 55,
+        "descripcion": "Tacos de anclaje de poliamida 100% nylon virgen de 8 mm con aletas antirrotación y reborde que evita que el tarugo se hunda en la perforación de ladrillo u hormigón.",
+        "imagen": "/static/catalogo/images/productos/27.jpg"
     },
     {
         "id": 28,
-        "nombre": "Escuadra metálica",
-        "categoria": "Materiales de construcción",
-        "precio": 10950,
-        "stock": 39
+        "nombre": "Golilla Plana Zincada 1/4 Bolsa 50 un Mamut",
+        "marca": "Mamut",
+        "categoria": "Fijaciones",
+        "precio": 1290,
+        "stock": 70,
+        "descripcion": "Arandelas planas de acero cincado electrolítico para repartir la presión de apriete en pernos y tuercas, previniendo el desgaste y la deformación de las superficies.",
+        "imagen": "/static/catalogo/images/productos/28.jpg"
     },
     {
         "id": 29,
-        "nombre": "Cúter profesional",
+        "nombre": "Tuerca Hexagonal Zincada 1/4 Caja 100 un Mamut",
+        "marca": "Mamut",
         "categoria": "Fijaciones",
-        "precio": 11300,
-        "stock": 46
+        "precio": 2490,
+        "stock": 48,
+        "descripcion": "Tuercas con rosca estándar UNC de acero grado 2 galvanizado para evitar la corrosión. Aptas para ensambles metálicos y carpintería de obra gruesa.",
+        "imagen": "/static/catalogo/images/productos/29.jpg"
     },
     {
         "id": 30,
-        "nombre": "Espátula",
-        "categoria": "Pinturas",
-        "precio": 11650,
-        "stock": 3
+        "nombre": "Perno Anclaje Expansión 3/8x3 Pulgadas Mamut",
+        "marca": "Mamut",
+        "categoria": "Fijaciones",
+        "precio": 1290,
+        "stock": 80,
+        "descripcion": "Perno de anclaje metálico con camisa de expansión cuña para fijaciones pesadas directas en hormigón sólido, barandas, pilares y estructuras de acero.",
+        "imagen": "/static/catalogo/images/productos/30.jpg"
     },
     {
         "id": 31,
-        "nombre": "Guantes de trabajo",
-        "categoria": "Herramientas manuales",
-        "precio": 12000,
-        "stock": 10
+        "nombre": "Esmalte al Agua Blanco Mate Galón Sipa",
+        "marca": "Sipa",
+        "categoria": "Pinturas",
+        "precio": 22990,
+        "stock": 16,
+        "descripcion": "Pintura arquitectónica al agua de alta lavabilidad, bajo olor y excelente poder cubridor. Recomendada para muros de yeso-cartón, estuco y fibrocemento.",
+        "imagen": "/static/catalogo/images/productos/31.jpg"
     },
     {
         "id": 32,
-        "nombre": "Gafas de seguridad",
-        "categoria": "Herramientas eléctricas",
-        "precio": 12350,
-        "stock": 17
+        "nombre": "Esmalte Sintético Blanco Brillante 1 Galón Tajamar",
+        "marca": "Tajamar",
+        "categoria": "Pinturas",
+        "precio": 18990,
+        "stock": 20,
+        "descripcion": "Pintura al óleo de acabado brillante y gran durabilidad para proteger y embellecer rejas metálicas, marcos y maderas expuestas a la intemperie.",
+        "imagen": "/static/catalogo/images/productos/32.jpg"
     },
     {
         "id": 33,
-        "nombre": "Casco protector",
-        "categoria": "Materiales de construcción",
-        "precio": 12700,
-        "stock": 24
+        "nombre": "Rodillo Antigota Fibra Trenzada 23 cm Lizcal",
+        "marca": "Lizcal",
+        "categoria": "Pinturas",
+        "precio": 4990,
+        "stock": 25,
+        "descripcion": "Rodillo profesional con funda de poliamida tejida antigoteo de 23 cm de ancho y mango anatómico roscado. Proporciona acabados lisos y homogéneos.",
+        "imagen": "/static/catalogo/images/productos/33.jpg"
     },
     {
         "id": 34,
-        "nombre": "Mascarilla",
-        "categoria": "Fijaciones",
-        "precio": 13050,
-        "stock": 31
+        "nombre": "Brocha Cerda Natural 2 Pulgadas Mango Madera F3C",
+        "marca": "F3C",
+        "categoria": "Pinturas",
+        "precio": 2490,
+        "stock": 35,
+        "descripcion": "Brocha plana de 2 pulgadas (50 mm) con cerdas naturales firmes sujetadas por virola de acero inoxidable, ideal para la aplicación de barnices, tintes y esmaltes.",
+        "imagen": "/static/catalogo/images/productos/34.jpg"
     },
     {
         "id": 35,
-        "nombre": "Zapatos de seguridad",
+        "nombre": "Aguarrás Mineral Puro 1 Litro Química Universal",
+        "marca": "Química Universal",
         "categoria": "Pinturas",
-        "precio": 13400,
-        "stock": 38
+        "precio": 2990,
+        "stock": 22,
+        "descripcion": "Solvente destilado de petróleo para dilución de pinturas al óleo y esmaltes sintéticos, así como para la limpieza profunda de brochas, rodillos y herramientas.",
+        "imagen": "/static/catalogo/images/productos/35.jpg"
     },
     {
         "id": 36,
-        "nombre": "Pegamento extrafuerte",
-        "categoria": "Herramientas manuales",
-        "precio": 13750,
-        "stock": 45
+        "nombre": "Guantes de Seguridad Cabritilla sin Forro Talla L",
+        "marca": "Steelpro",
+        "categoria": "Seguridad",
+        "precio": 3500,
+        "stock": 18,
+        "descripcion": "Guantes de protección en cuero cabritilla suave y flexible que entrega gran destreza táctil y protección contra abrasiones en faenas de construcción y manejo de materiales.",
+        "imagen": "/static/catalogo/images/productos/36.jpg"
     },
     {
         "id": 37,
-        "nombre": "Cinta adhesiva",
-        "categoria": "Herramientas eléctricas",
-        "precio": 14100,
-        "stock": 2
+        "nombre": "Lentes de Seguridad Policarbonato Oscuro Total",
+        "marca": "Total",
+        "categoria": "Seguridad",
+        "precio": 2990,
+        "stock": 30,
+        "descripcion": "Antiparras de policarbonato con filtro UV 400 y tratamiento antirrayaduras. Diseño envolvente y patillas ergonómicas para protección ocular contra astillas y virutas.",
+        "imagen": "/static/catalogo/images/productos/37.jpg"
     },
     {
         "id": 38,
-        "nombre": "Silicona transparente",
-        "categoria": "Materiales de construcción",
-        "precio": 14450,
-        "stock": 9
+        "nombre": "Casco de Seguridad Blanco con Arnés MSA",
+        "marca": "MSA",
+        "categoria": "Seguridad",
+        "precio": 8990,
+        "stock": 0,
+        "descripcion": "Casco dieléctrico de polietileno de alta densidad tipo 1 clase E, con suspensión de 4 puntos ajustable. Cumple normativa chilena para faenas de construcción (PRODUCTO AGOTADO).",
+        "imagen": "/static/catalogo/images/productos/38.jpg"
     },
     {
         "id": 39,
-        "nombre": "Espuma de poliuretano",
-        "categoria": "Fijaciones",
-        "precio": 14800,
-        "stock": 16
+        "nombre": "Zapatos de Seguridad Punta de Acero Ergonómicos Vidita",
+        "marca": "Vidita",
+        "categoria": "Seguridad",
+        "precio": 24990,
+        "stock": 8,
+        "descripcion": "Calzado de seguridad industrial confeccionado en cuero vacuno con puntera de acero certificada resistente a 200 Joules y suela antideslizante bidensidad resistente a hidrocarburos.",
+        "imagen": "/static/catalogo/images/productos/39.jpg"
     },
     {
         "id": 40,
-        "nombre": "Cinta aislante",
-        "categoria": "Pinturas",
-        "precio": 15150,
-        "stock": 23
+        "nombre": "Mascarilla Respirador N95 3M 8210 Original",
+        "marca": "3M",
+        "categoria": "Seguridad",
+        "precio": 2990,
+        "stock": 0,
+        "descripcion": "Respirador descartable para partículas N95 con filtro electrostático avanzado y clip nasal de aluminio maleable. Diseñado para polvos y lijado en obra (PRODUCTO AGOTADO).",
+        "imagen": "/static/catalogo/images/productos/40.jpg"
     }
 ]

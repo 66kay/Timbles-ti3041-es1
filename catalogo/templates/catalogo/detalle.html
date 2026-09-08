@@ -1,15 +1,87 @@
-{% extends 'catalogo/base.html' %} <!-- Hereda el diseño de base.html -->
+<!-- ============================================================
+     DETALLE.HTML - Vista individual de un producto
+     ============================================================
+     Muestra toda la información de un producto específico:
+     imagen grande, nombre, categoría, precio y stock.
+     
+     Incluye un botón para agregar al carrito (si hay stock)
+     o la etiqueta "SIN STOCK" si está agotado.
+     
+     Si el usuario es admin, también muestra los controles
+     para modificar stock y eliminar el producto.
+     ============================================================ -->
+
+{% extends 'catalogo/base.html' %}
 
 {% block content %}
-<h2>Detalle del Producto</h2>
-<div style="border: 1px solid #ccc; padding: 1rem; margin-top: 1rem;">
-    <!-- Mostramos los atributos específicos del producto que nos envió views.py -->
-    <h3>{{ producto.nombre }}</h3>
-    <p><strong>ID:</strong> {{ producto.id }}</p>
-    <p><strong>Categoría:</strong> {{ producto.categoria }}</p>
-    <p><strong>Precio:</strong> ${{ producto.precio }}</p>
-    <p><strong>Stock:</strong> {{ producto.stock }} unidades</p>
-    <br>
-    <a href="/" style="padding: 0.5rem 1rem; background-color: #333; color: white; text-decoration: none;">Volver al Catálogo</a>
+
+<h2 class="page-title">Detalle del Producto</h2>
+
+<!-- Contenedor principal con layout horizontal (imagen + info) -->
+<div class="detalle-container">
+    
+    <!-- Columna izquierda: Imagen del producto -->
+    <div class="detalle-imagen-container">
+        <img src="{{ producto.imagen }}" alt="{{ producto.nombre }}" class="detalle-imagen"
+             onerror="this.src='https://via.placeholder.com/500x500?text=Sin+Imagen'">
+    </div>
+    
+    <!-- Columna derecha: Información del producto -->
+    <div class="detalle-info">
+        <!-- Categoría y Marca -->
+        <div style="display: flex; gap: 10px; align-items: center; margin-bottom: 0.5rem;">
+            <span class="producto-categoria">{{ producto.categoria }}</span>
+            <span class="detalle-marca">Marca: <strong>{{ producto.marca }}</strong></span>
+        </div>
+        
+        <!-- Nombre del producto (título grande) -->
+        <h2 class="detalle-nombre">{{ producto.nombre }}</h2>
+        
+        <!-- Precio destacado -->
+        <p class="detalle-precio">${{ producto.precio|floatformat:0 }}</p>
+        
+        <!-- Descripción detallada del producto -->
+        <div class="detalle-descripcion">
+            <h4>Descripción:</h4>
+            <p>{{ producto.descripcion }}</p>
+        </div>
+        
+        <!-- Stock disponible -->
+        <p class="producto-stock">Stock disponible: {{ producto.stock }} unidades</p>
+        
+        <!-- Botón de compra o etiqueta de agotado -->
+        {% if producto.stock > 0 %}
+        <form action="{% url 'agregar_al_carrito' producto.id %}" method="POST" style="margin: 1rem 0;">
+            {% csrf_token %}
+            <button type="submit" class="btn-agregar" style="max-width: 300px;">🛒 Añadir al Carrito</button>
+        </form>
+        {% else %}
+        <div class="agotado-badge" style="max-width: 300px;">❌ SIN STOCK</div>
+        {% endif %}
+
+        <!-- CONTROLES DE ADMIN (solo visibles para administradores) -->
+        {% if role == 'admin' %}
+        <div class="admin-controls" style="margin-top: 1rem;">
+            <!-- Formulario para cambiar el stock -->
+            <form action="{% url 'modificar_stock' producto.id %}" method="POST" class="admin-stock-form">
+                {% csrf_token %}
+                <input type="number" name="nuevo_stock" value="{{ producto.stock }}" min="0" class="admin-stock-input">
+                <button type="submit" class="btn-admin-stock">✏️ Cambiar Stock</button>
+            </form>
+            
+            <!-- Formulario para eliminar (con confirmación) -->
+            <form action="{% url 'eliminar_producto' producto.id %}" method="POST" style="margin-top:8px;"
+                  onsubmit="return confirm('¿Seguro que deseas ELIMINAR este producto?');">
+                {% csrf_token %}
+                <button type="submit" class="btn-admin-delete">🗑️ Eliminar Producto</button>
+            </form>
+        </div>
+        {% endif %}
+        
+        <br>
+        <!-- Enlace para volver al catálogo -->
+        <a href="{% url 'index' %}" class="btn-volver">← Volver al Catálogo</a>
+    </div>
 </div>
+
 {% endblock %}

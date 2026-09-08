@@ -1,35 +1,106 @@
+<!-- ============================================================
+     LISTA.HTML - Catálogo de productos (página principal)
+     ============================================================
+     Hereda el diseño base de base.html.
+     Muestra todos los productos en formato de tarjetas (grid).
+     
+     Si el usuario es admin, cada tarjeta incluye controles
+     para modificar el stock o eliminar el producto.
+     
+     Si el producto tiene stock = 0, se muestra "SIN STOCK"
+     en lugar del botón de agregar al carrito.
+     ============================================================ -->
+
 {% extends 'catalogo/base.html' %} 
 
 {% block content %}
-<h2>Catálogo de Productos</h2>
-<p>Revisa nuestro catálogo completo. Los productos sin stock están marcados en rojo.</p>
-<table>
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>Nombre</th>
-            <th>Categoría</th>
-            <th>Precio</th>
-            <th>Stock</th>
-            <th>Acciones</th>
-        </tr>
-    </thead>
-    <tbody>
-        {% for producto in productos %}
-        <!-- NUEVO ETAPA 3: Usamos un IF para saber si el stock es 0. Si es 0, aplicamos la clase CSS "agotado" (fondo rojo) -->
-        {% if producto.stock == 0 %}
-        <tr class="agotado">
-        {% else %}
-        <tr>
-        {% endif %}
-            <td>{{ producto.id }}</td>
-            <td>{{ producto.nombre }}</td>
-            <td>{{ producto.categoria }}</td>
-            <td>${{ producto.precio }}</td>
-            <td>{{ producto.stock }}</td>
-            <td><a href="/producto/{{ producto.id }}/" style="color: inherit;">Ver Detalle</a></td>
-        </tr>
-        {% endfor %}
-    </tbody>
-</table>
+
+<!-- Título y descripción de la página -->
+<h2 class="page-title">Catálogo de Productos</h2>
+<p class="page-subtitle">Explora nuestra gran variedad de herramientas, materiales y accesorios.</p>
+
+<!-- Resumen calculado en la vista (Requisito Etapa 3 de la evaluación) -->
+<div class="resumen-container">
+    <div class="resumen-card">
+        <span class="resumen-num">{{ total_productos }}</span>
+        <span class="resumen-label">Total Productos</span>
+    </div>
+    <div class="resumen-card">
+        <span class="resumen-num" style="color: #2ed573;">{{ disponibles }}</span>
+        <span class="resumen-label">Disponibles con Stock</span>
+    </div>
+    <div class="resumen-card">
+        <span class="resumen-num" style="color: #ff4757;">{{ sin_stock }}</span>
+        <span class="resumen-label">Sin Stock (Agotados)</span>
+    </div>
+    <div class="resumen-card">
+        <span class="resumen-num" style="color: var(--primary-color);">{{ total_stock }}</span>
+        <span class="resumen-label">Unidades en Bodega</span>
+    </div>
+</div>
+
+<!-- Grilla de productos: se adapta automáticamente al tamaño de la pantalla -->
+<div class="productos-grid">
+    
+    <!-- Recorremos cada producto de la lista enviada desde views.py -->
+    {% for producto in productos %}
+    <div class="producto-card {% if producto.stock == 0 %}sin-stock-card{% endif %}">
+        
+        <!-- Imagen del producto (clickeable para ver el detalle) -->
+        <a href="{% url 'detalle' producto.id %}" style="text-decoration:none; color:inherit;">
+            <img src="{{ producto.imagen }}" alt="{{ producto.nombre }}" class="producto-imagen"
+                 onerror="this.src='https://via.placeholder.com/400x400?text=Sin+Imagen'">
+        </a>
+        
+        <div class="producto-info">
+            <!-- Categoría del producto (texto pequeño en mayúsculas) -->
+            <span class="producto-categoria">{{ producto.categoria }}</span>
+            
+            <!-- Nombre del producto -->
+            <h3 class="producto-nombre">{{ producto.nombre }}</h3>
+            
+            <!-- Precio formateado sin decimales -->
+            <p class="producto-precio">${{ producto.precio|floatformat:0 }}</p>
+            
+            <!-- Cantidad disponible en stock -->
+            <p class="producto-stock">Stock disponible: {{ producto.stock }}</p>
+            
+            <!-- CONDICIÓN: Si hay stock > 0, mostramos el botón de compra -->
+            {% if producto.stock > 0 %}
+            <form action="{% url 'agregar_al_carrito' producto.id %}" method="POST" style="margin:0;">
+                {% csrf_token %}
+                <button type="submit" class="btn-agregar">🛒 Añadir al Carrito</button>
+            </form>
+            {% else %}
+            <!-- Si el stock es 0, mostramos la etiqueta de agotado -->
+            <div class="agotado-badge">❌ SIN STOCK</div>
+            {% endif %}
+            
+            <!-- ============================================
+                 CONTROLES DE ADMIN
+                 Solo visibles si el rol del usuario es 'admin'
+                 ============================================ -->
+            {% if role == 'admin' %}
+            <div class="admin-controls">
+                <!-- Formulario para modificar el stock -->
+                <form action="{% url 'modificar_stock' producto.id %}" method="POST" class="admin-stock-form">
+                    {% csrf_token %}
+                    <input type="number" name="nuevo_stock" value="{{ producto.stock }}" min="0" class="admin-stock-input">
+                    <button type="submit" class="btn-admin-stock" title="Actualizar Stock">✏️</button>
+                </form>
+                
+                <!-- Formulario para eliminar el producto (con confirmación) -->
+                <form action="{% url 'eliminar_producto' producto.id %}" method="POST" style="margin:0;"
+                      onsubmit="return confirm('¿Seguro que deseas ELIMINAR este producto?');">
+                    {% csrf_token %}
+                    <button type="submit" class="btn-admin-delete" title="Eliminar Producto">🗑️</button>
+                </form>
+            </div>
+            {% endif %}
+            
+        </div>
+    </div>
+    {% endfor %}
+    
+</div>
 {% endblock %}

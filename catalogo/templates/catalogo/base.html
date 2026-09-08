@@ -4,31 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ferretería Timbles</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
-        header { background-color: #333; color: white; padding: 1rem; text-align: center; display: flex; justify-content: space-around; align-items: center;}
-        nav { background-color: #444; padding: 0.5rem; text-align: center; }
-        nav a { color: white; text-decoration: none; padding: 0 1rem; }
-        main { padding: 2rem; max-width: 800px; margin: auto; background-color: white; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-        table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
-        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
-        th { background-color: #f2f2f2; }
-        .agotado { background-color: #ffcccc; color: #a00; font-weight: bold; }
-        .logout-btn { background-color: #d9534f; color: white; padding: 5px 10px; text-decoration: none; border-radius: 4px; font-weight: bold;}
-    </style>
+    
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'catalogo/css/style.css' %}">
 </head>
 <body>
     <header>
-        <h1>Ferretería Timbles</h1>
-        <div style="background-color: #555; padding: 10px; border-radius: 5px;">
-            <strong>Total en Bodega:</strong> {{ total_stock }} unidades
+        <a href="{% url 'index' %}" class="brand">
+            <img src="{% static 'catalogo/images/logo.jpg' %}" alt="Logo Timbles">
+            <h1>Ferretería Timbles</h1>
+        </a>
+        
+        <div class="header-actions">
+            <div class="stock-badge">
+                👤 {{ usuario }}
+                {% if role == 'admin' %}
+                <span class="admin-tag">ADMIN</span>
+                {% endif %}
+            </div>
+
+            {% if total_stock is not None %}
+            <div class="stock-badge">
+                📦 Bodega: {{ total_stock }} uds
+            </div>
+            {% endif %}
+            
+            <a href="{% url 'ver_carrito' %}" class="cart-btn">
+                🛒 Carrito ({{ carrito_count|default:"0" }})
+            </a>
+            
+            <a href="{% url 'logout_view' %}" class="logout-btn">Salir</a>
         </div>
-        <!-- Botón para cerrar sesión -->
-        <a href="{% url 'logout_view' %}" class="logout-btn">Salir</a>
     </header>
-    <nav>
-        <a href="/">Inicio (Catálogo)</a>
-    </nav>
+    
     <main>
         {% block content %}{% endblock %}
     </main>

@@ -1,0 +1,72 @@
+<!-- ============================================================
+     CARRITO.HTML - Vista del carrito de compras
+     ============================================================
+     Muestra los productos que el usuario ha agregado al carrito.
+     Calcula el total a pagar y ofrece dos opciones:
+       - "Completar Compra": Descuenta el stock del JSON.
+       - "Vaciar Carrito": Elimina los productos sin comprar.
+     Si el carrito está vacío, muestra un mensaje con un botón
+     para volver al catálogo.
+     ============================================================ -->
+
+{% extends 'catalogo/base.html' %}
+
+{% block content %}
+
+<h2 class="page-title">Tu Carrito de Compras</h2>
+
+<!-- Solo mostramos el contenido si hay productos en el carrito -->
+{% if productos_carrito %}
+<div class="carrito-container">
+
+    <!-- Lista de productos en el carrito -->
+    {% for item in productos_carrito %}
+    <div class="carrito-item">
+        <!-- Imagen pequeña del producto -->
+        <img src="{{ item.imagen }}" alt="{{ item.nombre }}" class="carrito-item-img"
+            onerror="this.src='https://via.placeholder.com/80x80?text=?'">
+
+        <!-- Nombre y categoría del producto -->
+        <div class="carrito-item-info">
+            <h3 class="carrito-item-title">{{ item.nombre }}</h3>
+            <span class="producto-categoria">{{ item.categoria }}</span>
+        </div>
+
+        <!-- Precio individual del producto -->
+        <div class="carrito-item-price">
+            ${{ item.precio|floatformat:0 }}
+        </div>
+    </div>
+    {% endfor %}
+
+    <!-- Total a pagar (suma de todos los precios del carrito) -->
+    <div class="carrito-total">
+        Total: ${{ total_precio|floatformat:0 }}
+    </div>
+
+    <!-- Botones de acción -->
+    <div class="carrito-actions">
+        <!-- Botón para vaciar el carrito sin comprar -->
+        <form action="{% url 'vaciar_carrito' %}" method="POST" style="margin:0;">
+            {% csrf_token %}
+            <button type="submit" class="btn-vaciar">Vaciar Carrito</button>
+        </form>
+
+        <!-- Botón para completar la compra (descuenta stock) -->
+        <form action="{% url 'comprar_carrito' %}" method="POST" style="margin:0;">
+            {% csrf_token %}
+            <button type="submit" class="btn-comprar">✅ Completar Compra</button>
+        </form>
+    </div>
+</div>
+
+{% else %}
+<!-- Mensaje cuando el carrito está vacío -->
+<div class="carrito-container" style="text-align: center; padding: 4rem 2rem;">
+    <h3 style="color: #666; margin-bottom: 2rem;">🛒 Tu carrito está vacío</h3>
+    <a href="{% url 'index' %}" class="btn-comprar"
+        style="text-decoration: none; display: inline-block; width: auto;">Volver al Catálogo</a>
+</div>
+{% endif %}
+
+{% endblock %}

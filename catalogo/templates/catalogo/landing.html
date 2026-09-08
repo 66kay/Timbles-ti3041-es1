@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferretería Timbles - Tu Ferretería de Confianza</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'catalogo/css/style.css' %}">
+</head>
+<body class="landing-body">
+    
+    <!-- HERO SECTION -->
+    <div class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <img src="{% static 'catalogo/images/logo.jpg' %}" alt="Logo Timbles" class="hero-logo">
+            <h1 class="hero-title">Ferretería Timbles</h1>
+            <p class="hero-subtitle">Todo lo que necesitas para construir, reparar y renovar tu hogar</p>
+            <div class="hero-buttons">
+                <a href="{% url 'login_view' %}" class="btn-hero btn-hero-primary">Ingresar al Sistema</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- CATEGORÍAS -->
+    <section class="landing-categories">
+        <h2 class="section-title">Nuestras Categorías</h2>
+        <div class="categories-grid">
+            <div class="category-card">
+                <span class="category-icon">🔨</span>
+                <h3>Herramientas Manuales</h3>
+                <p>Martillos, destornilladores, llaves y más</p>
+            </div>
+            <div class="category-card">
+                <span class="category-icon">⚡</span>
+                <h3>Herramientas Eléctricas</h3>
+                <p>Taladros, amoladoras, sierras y lijadoras</p>
+            </div>
+            <div class="category-card">
+                <span class="category-icon">🧱</span>
+                <h3>Materiales de Construcción</h3>
+                <p>Cemento, arena, ladrillos y adhesivos</p>
+            </div>
+            <div class="category-card">
+                <span class="category-icon">🔩</span>
+                <h3>Fijaciones</h3>
+                <p>Clavos, tornillos, tarugos y pernos</p>
+            </div>
+            <div class="category-card">
+                <span class="category-icon">🎨</span>
+                <h3>Pinturas</h3>
+                <p>Látex, esmaltes, rodillos y pinceles</p>
+            </div>
+            <div class="category-card">
+                <span class="category-icon">🦺</span>
+                <h3>Seguridad</h3>
+                <p>Cascos, guantes, gafas y zapatos</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="landing-footer">
+        <p>&copy; 2024 Ferretería Timbles — Proyecto Django para Evaluación Sumativa 1</p>
+    </footer>
+</body>
+</html>

@@ -1,26 +1,26 @@
-"""
-=====================================================
-TESTS.PY - Pruebas Automatizadas de Ferretería Timbles
-=====================================================
-Este archivo contiene pruebas unitarias y de integración
-para verificar todo el funcionamiento del sistema:
 
-1. Integridad de los datos JSON (40 productos, imágenes y campos).
-2. Flujo completo del rol CLIENTE (cliente / cliente):
-   - Navegación pública (Landing)
-   - Redirección si no está logeado
-   - Login con credenciales de cliente
-   - Vista de catálogo y vista de detalle
-   - Manejo de error 404 para IDs inexistentes
-   - Carrito de compras (añadir, vaciar y comprar)
-   - Seguridad: un cliente NO puede modificar stock ni eliminar
-3. Flujo completo del rol ADMIN (admin / admin):
-   - Login con credenciales de administrador
-   - Visualización de botones y controles de administración
-   - Modificación de stock
-   - Eliminación de productos
-4. Cierre de sesión (Logout)
-"""
+#=====================================================
+#TESTS.PY - Pruebas Automatizadas de Ferretería Timbles
+#=====================================================
+#Este archivo contiene pruebas unitarias y de integración
+#para verificar todo el funcionamiento del sistema:
+
+#1. Integridad de los datos JSON (40 productos, imágenes y campos).
+#2. Flujo completo del rol CLIENTE (cliente / cliente):
+#   - Navegación pública (Landing)
+#   - Redirección si no está logeado
+#   - Login con credenciales de cliente
+#   - Vista de catálogo y vista de detalle
+#   - Manejo de error 404 para IDs inexistentes
+#   - Carrito de compras (añadir, vaciar y comprar)
+#   - Seguridad: un cliente NO puede modificar stock ni eliminar
+#3. Flujo completo del rol ADMIN (admin / admin):
+#   - Login con credenciales de administrador
+#   - Visualización de botones y controles de administración
+#   - Modificación de stock
+#   - Eliminación de productos
+#4. Cierre de sesión (Logout)
+
 
 import os
 import json
@@ -52,12 +52,13 @@ class CatalogoTestSuite(TestCase):
         Restaura el archivo productos.json original desde el respaldo.
         """
         if os.path.exists(self.backup_path):
-            shutil.copyfile(self.backup_path, self.json_path)
-            os.remove(self.backup_path)
+            try:
+                shutil.copyfile(self.backup_path, self.json_path)
+                os.remove(self.backup_path)
+            except PermissionError:
+                pass
 
-    # =================================================================
     # 1. PRUEBAS DE DATOS (REQUISITOS RÚBRICA INACAP ES1)
-    # =================================================================
 
     def test_01_datos_json_40_productos(self):
         """Verifica que el JSON contenga exactamente 40 productos (Variante Ferretería)."""
@@ -87,9 +88,7 @@ class CatalogoTestSuite(TestCase):
         agotados = [p for p in productos if p['stock'] == 0]
         self.assertGreater(len(agotados), 0, "Debe haber al menos un producto con stock 0 para la Etapa 3.")
 
-    # =================================================================
-    # 2. PRUEBAS DE NAVEGACIÓN Y LOGIN
-    # =================================================================
+    # PRUEBAS DE NAVEGACIÓN Y LOGIN
 
     def test_04_landing_publica(self):
         """La página de inicio (landing) debe ser accesible sin login (HTTP 200)."""
@@ -112,9 +111,7 @@ class CatalogoTestSuite(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, "Usuario o contraseña incorrectos")
 
-    # =================================================================
-    # 3. PRUEBAS DE ROL CLIENTE (cliente / cliente)
-    # =================================================================
+    # PRUEBAS DE ROL CLIENTE (cliente / cliente)
 
     def test_07_login_cliente_exitoso(self):
         """El cliente puede iniciar sesión correctamente y es redirigido al catálogo."""
@@ -202,9 +199,7 @@ class CatalogoTestSuite(TestCase):
         self.assertIsNotNone(p1, "El producto 1 no debió ser eliminado por un cliente.")
         self.assertNotEqual(p1['stock'], 999, "El stock no debió ser modificado por un cliente.")
 
-    # =================================================================
-    # 4. PRUEBAS DE ROL ADMIN (admin / admin)
-    # =================================================================
+    # PRUEBAS DE ROL ADMIN (admin / admin)
 
     def test_13_login_admin_exitoso(self):
         """El administrador inicia sesión y tiene asignado el rol 'admin'."""
@@ -254,9 +249,7 @@ class CatalogoTestSuite(TestCase):
         self.assertIsNone(next((p for p in prods if p['id'] == 3), None), "El producto 3 debió ser eliminado.")
         self.assertEqual(len(prods), 39, "Deberían quedar 39 productos.")
 
-    # =================================================================
-    # 5. PRUEBA DE LOGOUT
-    # =================================================================
+    # PRUEBA DE LOGOUT
 
     def test_17_logout_cierra_sesion(self):
         """Al cerrar sesión, la sesión se destruye y redirige a la landing page."""
